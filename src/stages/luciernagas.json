@@ -1,0 +1,253 @@
+{
+  "id": "luciernagas",
+  "nameKey": "stage.luciernagas",
+  "fromTile": 512,
+  "bpm": 104,
+  "loops": [
+    {
+      "key": "Sol pentatónica",
+      "scale": [
+        "G",
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "chords": [
+        {
+          "chord": "Gmaj9",
+          "bars": 1,
+          "notes": [
+            "G2",
+            "D3",
+            "F#3",
+            "A3",
+            "B3"
+          ],
+          "root": "G1"
+        },
+        {
+          "chord": "Em7",
+          "bars": 1,
+          "notes": [
+            "E3",
+            "G3",
+            "B3",
+            "D4"
+          ],
+          "root": "E2"
+        },
+        {
+          "chord": "Cmaj9",
+          "bars": 1,
+          "notes": [
+            "C3",
+            "E3",
+            "G3",
+            "B3",
+            "D4"
+          ],
+          "root": "C2"
+        },
+        {
+          "chord": "Dsus2",
+          "bars": 1,
+          "notes": [
+            "D3",
+            "A3",
+            "D4",
+            "E4"
+          ],
+          "root": "D2"
+        }
+      ],
+      "melody": "B4:2 D5:2 B4:2 A4:2 G4:8 G4:2 B4:2 D5:4 E5:8 E5:2 D5:2 B4:4 G4:4 E4:4 A4:8 E4:8"
+    },
+    {
+      "key": "La pentatónica",
+      "scale": [
+        "A",
+        "B",
+        "C#",
+        "E",
+        "F#"
+      ],
+      "chords": [
+        {
+          "chord": "Amaj9",
+          "bars": 1,
+          "notes": [
+            "A2",
+            "E3",
+            "G#3",
+            "B3",
+            "C#4"
+          ],
+          "root": "A1"
+        },
+        {
+          "chord": "F#m7",
+          "bars": 1,
+          "notes": [
+            "F#3",
+            "A3",
+            "C#4",
+            "E4"
+          ],
+          "root": "F#2"
+        },
+        {
+          "chord": "Dmaj9",
+          "bars": 1,
+          "notes": [
+            "D3",
+            "F#3",
+            "A3",
+            "C#4",
+            "E4"
+          ],
+          "root": "D2"
+        },
+        {
+          "chord": "Esus2",
+          "bars": 1,
+          "notes": [
+            "E3",
+            "B3",
+            "E4",
+            "F#4"
+          ],
+          "root": "E2"
+        }
+      ],
+      "melody": "C#5:2 E5:2 C#5:2 B4:2 A4:4 E5:4 A4:2 C#5:2 E5:4 F#5:8 F#5:2 E5:2 C#5:4 A4:4 F#4:4 B4:4 E5:4 F#5:8"
+    },
+    {
+      "key": "Do pentatónica",
+      "scale": [
+        "C",
+        "D",
+        "E",
+        "G",
+        "A"
+      ],
+      "chords": [
+        {
+          "chord": "Fmaj7",
+          "bars": 1,
+          "notes": [
+            "F3",
+            "A3",
+            "C4",
+            "E4"
+          ],
+          "root": "F1"
+        },
+        {
+          "chord": "G6",
+          "bars": 1,
+          "notes": [
+            "G3",
+            "B3",
+            "D4",
+            "E4"
+          ],
+          "root": "G1"
+        },
+        {
+          "chord": "Em7",
+          "bars": 1,
+          "notes": [
+            "E3",
+            "G3",
+            "B3",
+            "D4"
+          ],
+          "root": "E2"
+        },
+        {
+          "chord": "Am7",
+          "bars": 1,
+          "notes": [
+            "A2",
+            "E3",
+            "G3",
+            "C4"
+          ],
+          "root": "A1"
+        }
+      ],
+      "melody": "A5:2 G5:2 E5:4 C5:4 E5:4 D5:2 E5:2 G5:4 D5:4 E5:4 E5:4 G5:4 D5:4 B4:4 C5:4 E5:4 A5:8"
+    }
+  ],
+  "sectionThresholds": [
+    0.125,
+    0.25
+  ],
+  "layers": {
+    "drone": {
+      "wave": "sine",
+      "gainDb": -24,
+      "cutoff": 500
+    },
+    "pad": {
+      "wave": "sine",
+      "gainDb": -24,
+      "cutoff": 900
+    },
+    "bass": {
+      "wave": "sine",
+      "gainDb": -14,
+      "cutoff": 400,
+      "steps": "x.......x...x...",
+      "decay": 0.5,
+      "fm": {
+        "ratio": 1,
+        "index": 0.6
+      }
+    },
+    "arp": {
+      "wave": "sine",
+      "gainDb": -18,
+      "cutoff": 4000,
+      "steps": "x..x..x...x..x..",
+      "decay": 0.4,
+      "fm": {
+        "ratio": 5,
+        "index": 1.2
+      }
+    },
+    "perc": {
+      "gainDb": -22,
+      "kick": "x.......x.......",
+      "hat": "....x.......x...",
+      "snare": "................"
+    },
+    "melody": {
+      "wave": "sine",
+      "gainDb": -16,
+      "cutoff": 4000,
+      "decay": 1.0,
+      "fm": {
+        "ratio": 5,
+        "index": 1
+      }
+    }
+  },
+  "voice": {
+    "wave": "sine",
+    "decay": 0.8,
+    "cutoff": 4000,
+    "fm": {
+      "ratio": 5,
+      "index": 1.2
+    }
+  },
+  "palette": [
+    "#00c853",
+    "#c6ff00",
+    "#ffab00"
+  ],
+  "tileSkin": "firefly",
+  "environment": "luciernagas"
+}

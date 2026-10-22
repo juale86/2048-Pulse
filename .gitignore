@@ -1,0 +1,27 @@
+# Dependencies and builds
+node_modules
+dist
+# The portal ZIP is generated with `npm run zip`
+*.zip
+coverage
+
+# Local/secret variables (.env.<mode> files ARE committed: they only pick the SDK)
+*.local
+
+# Logs and caches
+*.log
+npm-debug.log*
+.vite
+.eslintcache
+*.tsbuildinfo
+
+# OS and editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Claude Code: personal settings
+.claude/settings.local.json

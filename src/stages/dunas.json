@@ -1,0 +1,257 @@
+{
+  "id": "dunas",
+  "nameKey": "stage.dunas",
+  "fromTile": 128,
+  "bpm": 100,
+  "loops": [
+    {
+      "key": "La mixolidio",
+      "scale": [
+        "A",
+        "B",
+        "C#",
+        "D",
+        "E",
+        "F#",
+        "G"
+      ],
+      "chords": [
+        {
+          "chord": "Aadd9",
+          "bars": 1,
+          "notes": [
+            "A2",
+            "E3",
+            "B3",
+            "C#4"
+          ],
+          "root": "A1"
+        },
+        {
+          "chord": "Gadd9",
+          "bars": 1,
+          "notes": [
+            "G2",
+            "D3",
+            "A3",
+            "B3"
+          ],
+          "root": "G1"
+        },
+        {
+          "chord": "D",
+          "bars": 1,
+          "notes": [
+            "D3",
+            "F#3",
+            "A3",
+            "E4"
+          ],
+          "root": "D2"
+        },
+        {
+          "chord": "Esus4",
+          "bars": 1,
+          "notes": [
+            "E3",
+            "A3",
+            "B3",
+            "E4"
+          ],
+          "root": "E2"
+        }
+      ],
+      "melody": "C#5:3 B4:3 A4:2 E4:8 D4:3 B4:3 A4:2 G4:8 F#4:3 A4:3 E5:2 D5:8 B4:4 A4:4 E4:8"
+    },
+    {
+      "key": "Si mixolidio",
+      "scale": [
+        "B",
+        "C#",
+        "D#",
+        "E",
+        "F#",
+        "G#",
+        "A"
+      ],
+      "chords": [
+        {
+          "chord": "Badd9",
+          "bars": 1,
+          "notes": [
+            "B2",
+            "F#3",
+            "C#4",
+            "D#4"
+          ],
+          "root": "B1"
+        },
+        {
+          "chord": "Aadd9",
+          "bars": 1,
+          "notes": [
+            "A2",
+            "E3",
+            "B3",
+            "C#4"
+          ],
+          "root": "A1"
+        },
+        {
+          "chord": "E",
+          "bars": 1,
+          "notes": [
+            "E3",
+            "G#3",
+            "B3",
+            "F#4"
+          ],
+          "root": "E2"
+        },
+        {
+          "chord": "F#sus4",
+          "bars": 1,
+          "notes": [
+            "F#3",
+            "B3",
+            "C#4",
+            "F#4"
+          ],
+          "root": "F#2"
+        }
+      ],
+      "melody": "D#5:3 C#5:3 B4:2 F#5:8 E5:3 C#5:3 B4:2 A4:8 G#4:2 B4:2 E5:4 F#5:4 E5:4 C#5:4 B4:4 F#4:8"
+    },
+    {
+      "key": "Re mayor",
+      "scale": [
+        "D",
+        "E",
+        "F#",
+        "G",
+        "A",
+        "B",
+        "C#"
+      ],
+      "chords": [
+        {
+          "chord": "Gmaj9",
+          "bars": 1,
+          "notes": [
+            "G2",
+            "D3",
+            "F#3",
+            "A3",
+            "B3"
+          ],
+          "root": "G1"
+        },
+        {
+          "chord": "A6",
+          "bars": 1,
+          "notes": [
+            "A2",
+            "E3",
+            "F#3",
+            "C#4"
+          ],
+          "root": "A1"
+        },
+        {
+          "chord": "F#m7",
+          "bars": 1,
+          "notes": [
+            "F#2",
+            "C#3",
+            "E3",
+            "A3"
+          ],
+          "root": "F#1"
+        },
+        {
+          "chord": "Bm9",
+          "bars": 1,
+          "notes": [
+            "B2",
+            "D3",
+            "F#3",
+            "A3",
+            "C#4"
+          ],
+          "root": "B1"
+        }
+      ],
+      "melody": "B4:2 D5:2 F#5:4 E5:2 D5:2 B4:4 C#5:2 E5:2 A5:4 F#5:4 E5:4 C#5:4 E5:4 F#5:4 A5:4 F#5:8 D5:4 C#5:4"
+    }
+  ],
+  "sectionThresholds": [
+    0.125,
+    0.25
+  ],
+  "layers": {
+    "drone": {
+      "wave": "sine",
+      "gainDb": -24,
+      "cutoff": 500
+    },
+    "pad": {
+      "wave": "triangle",
+      "gainDb": -26,
+      "cutoff": 800
+    },
+    "bass": {
+      "wave": "sine",
+      "gainDb": -14,
+      "cutoff": 500,
+      "steps": "x.....x.x.......",
+      "decay": 0.3,
+      "fm": {
+        "ratio": 1,
+        "index": 0.6
+      }
+    },
+    "arp": {
+      "wave": "sine",
+      "gainDb": -20,
+      "cutoff": 3500,
+      "steps": "x..x..x.x..x..x.",
+      "decay": 0.25,
+      "fm": {
+        "ratio": 4,
+        "index": 2.5
+      }
+    },
+    "perc": {
+      "gainDb": -16,
+      "kick": "x.....x.x.......",
+      "hat": "..x...x...x..x.x",
+      "snare": "....x.......x..."
+    },
+    "melody": {
+      "wave": "triangle",
+      "gainDb": -17,
+      "cutoff": 3500,
+      "decay": 0.6,
+      "fm": {
+        "ratio": 4,
+        "index": 1.5
+      }
+    }
+  },
+  "voice": {
+    "wave": "triangle",
+    "decay": 0.5,
+    "cutoff": 4000,
+    "fm": {
+      "ratio": 4,
+      "index": 2.5
+    }
+  },
+  "palette": [
+    "#ff8f00",
+    "#ffd54f",
+    "#f48fb1"
+  ],
+  "tileSkin": "sandstone",
+  "environment": "dunas"
+}

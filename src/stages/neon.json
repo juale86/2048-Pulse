@@ -1,0 +1,284 @@
+{
+  "id": "neon",
+  "nameKey": "stage.neon",
+  "fromTile": 256,
+  "bpm": 118,
+  "loops": [
+    {
+      "key": "Do mayor",
+      "scale": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B"
+      ],
+      "chords": [
+        {
+          "chord": "Fmaj9",
+          "bars": 1,
+          "notes": [
+            "F3",
+            "A3",
+            "C4",
+            "E4",
+            "G4"
+          ],
+          "root": "F1"
+        },
+        {
+          "chord": "Em7",
+          "bars": 1,
+          "notes": [
+            "E3",
+            "G3",
+            "B3",
+            "D4"
+          ],
+          "root": "E2"
+        },
+        {
+          "chord": "Dm9",
+          "bars": 1,
+          "notes": [
+            "D3",
+            "F3",
+            "A3",
+            "C4",
+            "E4"
+          ],
+          "root": "D2"
+        },
+        {
+          "chord": "G6",
+          "bars": 1,
+          "notes": [
+            "G3",
+            "B3",
+            "D4",
+            "E4"
+          ],
+          "root": "G1"
+        }
+      ],
+      "melody": "E5:4 C5:2 A4:2 G4:8 G4:2 B4:2 D5:4 B4:8 A4:2 C5:2 E5:4 D5:4 C5:4 B4:6 D5:2 E5:8"
+    },
+    {
+      "key": "Re mayor",
+      "scale": [
+        "D",
+        "E",
+        "F#",
+        "G",
+        "A",
+        "B",
+        "C#"
+      ],
+      "chords": [
+        {
+          "chord": "Gmaj9",
+          "bars": 1,
+          "notes": [
+            "G3",
+            "B3",
+            "D4",
+            "F#4",
+            "A4"
+          ],
+          "root": "G1"
+        },
+        {
+          "chord": "F#m7",
+          "bars": 1,
+          "notes": [
+            "F#3",
+            "A3",
+            "C#4",
+            "E4"
+          ],
+          "root": "F#1"
+        },
+        {
+          "chord": "Em9",
+          "bars": 1,
+          "notes": [
+            "E3",
+            "G3",
+            "B3",
+            "D4",
+            "F#4"
+          ],
+          "root": "E2"
+        },
+        {
+          "chord": "A6",
+          "bars": 1,
+          "notes": [
+            "A2",
+            "E3",
+            "F#3",
+            "C#4"
+          ],
+          "root": "A1"
+        }
+      ],
+      "melody": "F#5:4 D5:2 B4:2 A4:4 B4:4 A4:2 C#5:2 E5:4 C#5:4 A4:4 B4:2 D5:2 F#5:4 E5:4 D5:4 C#5:4 E5:4 F#5:8"
+    },
+    {
+      "key": "Mi mayor",
+      "scale": [
+        "E",
+        "F#",
+        "G#",
+        "A",
+        "B",
+        "C#",
+        "D#"
+      ],
+      "chords": [
+        {
+          "chord": "Amaj9",
+          "bars": 1,
+          "notes": [
+            "A2",
+            "E3",
+            "G#3",
+            "B3",
+            "C#4"
+          ],
+          "root": "A1"
+        },
+        {
+          "chord": "B6",
+          "bars": 1,
+          "notes": [
+            "B2",
+            "D#3",
+            "F#3",
+            "G#3"
+          ],
+          "root": "B1"
+        },
+        {
+          "chord": "G#m7",
+          "bars": 1,
+          "notes": [
+            "G#2",
+            "D#3",
+            "F#3",
+            "B3"
+          ],
+          "root": "G#1"
+        },
+        {
+          "chord": "C#m9",
+          "bars": 1,
+          "notes": [
+            "C#3",
+            "E3",
+            "G#3",
+            "B3",
+            "D#4"
+          ],
+          "root": "C#2"
+        }
+      ],
+      "melody": "C#5:2 E5:2 G#5:4 F#5:2 E5:2 C#5:4 D#5:2 F#5:2 B5:4 G#5:4 F#5:4 D#5:4 F#5:4 G#5:4 B5:4 G#5:8 E5:4 D#5:4"
+    }
+  ],
+  "sectionThresholds": [
+    0.125,
+    0.25
+  ],
+  "layers": {
+    "drone": {
+      "wave": "sine",
+      "gainDb": -24,
+      "cutoff": 500
+    },
+    "pad": {
+      "wave": "triangle",
+      "gainDb": -26,
+      "cutoff": 1200
+    },
+    "bass": {
+      "wave": "triangle",
+      "gainDb": -14,
+      "cutoff": 700,
+      "steps": "..x...x...x...x.",
+      "decay": 0.2,
+      "fm": {
+        "ratio": 1,
+        "index": 0.6
+      }
+    },
+    "arp": {
+      "wave": "triangle",
+      "gainDb": -24,
+      "cutoff": 3000,
+      "steps": "xxxxxxxxxxxxxxxx",
+      "decay": 0.2,
+      "fm": {
+        "ratio": 1,
+        "index": 1.5
+      }
+    },
+    "perc": {
+      "gainDb": -14,
+      "kick": "x...x...x...x...",
+      "hat": "..x...x...x...x.",
+      "snare": "....x.......x..."
+    },
+    "melody": {
+      "wave": "sine",
+      "gainDb": -16,
+      "cutoff": 3500,
+      "decay": 1.0,
+      "fm": {
+        "ratio": 1,
+        "index": 1.2
+      }
+    }
+  },
+  "sections": [
+    [
+      "drone",
+      "pad",
+      "melody",
+      "bass"
+    ],
+    [
+      "drone",
+      "pad",
+      "melody",
+      "bass",
+      "perc"
+    ],
+    [
+      "drone",
+      "pad",
+      "melody",
+      "bass",
+      "perc",
+      "arp"
+    ]
+  ],
+  "voice": {
+    "wave": "sine",
+    "decay": 0.7,
+    "cutoff": 3500,
+    "fm": {
+      "ratio": 1,
+      "index": 1.5
+    }
+  },
+  "palette": [
+    "#d500f9",
+    "#00e5ff",
+    "#7c4dff"
+  ],
+  "tileSkin": "neon",
+  "environment": "neon"
+}

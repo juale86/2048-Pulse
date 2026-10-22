@@ -1,0 +1,258 @@
+{
+  "id": "abismo",
+  "nameKey": "stage.abismo",
+  "fromTile": 0,
+  "bpm": 90,
+  "loops": [
+    {
+      "key": "D mayor",
+      "scale": [
+        "D",
+        "E",
+        "F#",
+        "G",
+        "A",
+        "B",
+        "C#"
+      ],
+      "chords": [
+        {
+          "chord": "Dmaj9",
+          "bars": 1,
+          "notes": [
+            "D3",
+            "F#3",
+            "A3",
+            "C#4",
+            "E4"
+          ],
+          "root": "D2"
+        },
+        {
+          "chord": "Bm7",
+          "bars": 1,
+          "notes": [
+            "B2",
+            "D3",
+            "F#3",
+            "A3"
+          ],
+          "root": "B1"
+        },
+        {
+          "chord": "Gmaj7",
+          "bars": 1,
+          "notes": [
+            "G2",
+            "D3",
+            "F#3",
+            "B3"
+          ],
+          "root": "G1"
+        },
+        {
+          "chord": "Asus2",
+          "bars": 1,
+          "notes": [
+            "A2",
+            "E3",
+            "A3",
+            "B3"
+          ],
+          "root": "A1"
+        }
+      ],
+      "melody": "F#4:8 E4:4 D4:4 D4:4 F#4:4 A4:8 B4:8 A4:4 F#4:4 E4:12 -:4"
+    },
+    {
+      "key": "E mayor",
+      "scale": [
+        "E",
+        "F#",
+        "G#",
+        "A",
+        "B",
+        "C#",
+        "D#"
+      ],
+      "chords": [
+        {
+          "chord": "Emaj9",
+          "bars": 1,
+          "notes": [
+            "E3",
+            "G#3",
+            "B3",
+            "D#4",
+            "F#4"
+          ],
+          "root": "E2"
+        },
+        {
+          "chord": "C#m7",
+          "bars": 1,
+          "notes": [
+            "C#3",
+            "E3",
+            "G#3",
+            "B3"
+          ],
+          "root": "C#2"
+        },
+        {
+          "chord": "Amaj7",
+          "bars": 1,
+          "notes": [
+            "A2",
+            "E3",
+            "G#3",
+            "C#4"
+          ],
+          "root": "A1"
+        },
+        {
+          "chord": "B6",
+          "bars": 1,
+          "notes": [
+            "B2",
+            "D#3",
+            "F#3",
+            "G#3"
+          ],
+          "root": "B1"
+        }
+      ],
+      "melody": "G#4:4 B4:4 C#5:4 B4:4 G#4:6 E4:2 G#4:8 A4:4 C#5:4 E5:4 C#5:4 D#5:8 B4:8"
+    },
+    {
+      "key": "G mayor",
+      "scale": [
+        "G",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F#"
+      ],
+      "chords": [
+        {
+          "chord": "Cmaj9",
+          "bars": 1,
+          "notes": [
+            "C3",
+            "E3",
+            "G3",
+            "B3",
+            "D4"
+          ],
+          "root": "C2"
+        },
+        {
+          "chord": "D6",
+          "bars": 1,
+          "notes": [
+            "D3",
+            "F#3",
+            "A3",
+            "B3"
+          ],
+          "root": "D2"
+        },
+        {
+          "chord": "Bm7",
+          "bars": 1,
+          "notes": [
+            "B2",
+            "D3",
+            "F#3",
+            "A3"
+          ],
+          "root": "B1"
+        },
+        {
+          "chord": "Em7",
+          "bars": 1,
+          "notes": [
+            "E3",
+            "G3",
+            "B3",
+            "D4"
+          ],
+          "root": "E2"
+        }
+      ],
+      "melody": "E5:2 D5:2 E5:4 G5:4 E5:4 F#5:4 A5:4 F#5:2 E5:2 D5:4 D5:4 F#5:4 B5:4 A5:4 G5:8 E5:4 D5:4"
+    }
+  ],
+  "sectionThresholds": [
+    0.125,
+    0.25
+  ],
+  "layers": {
+    "drone": {
+      "wave": "sine",
+      "gainDb": -24,
+      "cutoff": 500
+    },
+    "pad": {
+      "wave": "sine",
+      "gainDb": -24,
+      "cutoff": 900
+    },
+    "bass": {
+      "wave": "sine",
+      "gainDb": -14,
+      "cutoff": 500,
+      "steps": "x...x...x...x...",
+      "decay": 0.5,
+      "fm": {
+        "ratio": 1,
+        "index": 0.6
+      }
+    },
+    "arp": {
+      "wave": "sine",
+      "gainDb": -22,
+      "cutoff": 3000,
+      "steps": "x.x.x.x.x.x.x.x.",
+      "decay": 0.5,
+      "fm": {
+        "ratio": 5,
+        "index": 1.2
+      }
+    },
+    "perc": {
+      "gainDb": -20,
+      "kick": "x.......x.......",
+      "hat": "..x...x...x...x.",
+      "snare": "................"
+    },
+    "melody": {
+      "wave": "sine",
+      "gainDb": -16,
+      "cutoff": 3500,
+      "decay": 1.4,
+      "fm": {
+        "ratio": 2,
+        "index": 0.5
+      }
+    }
+  },
+  "voice": {
+    "wave": "sine",
+    "decay": 1.0,
+    "cutoff": 4000,
+    "fm": {
+      "ratio": 4,
+      "index": 1
+    }
+  },
+  "palette": [
+    "#0d47a1",
+    "#00b8d4",
+    "#1de9b6"
+  ],
+  "tileSkin": "bioluminescent",
+  "environment": "abismo"
+}

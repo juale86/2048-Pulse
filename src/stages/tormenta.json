@@ -1,0 +1,280 @@
+{
+  "id": "tormenta",
+  "nameKey": "stage.tormenta",
+  "fromTile": 1024,
+  "bpm": 128,
+  "loops": [
+    {
+      "key": "Si♭ mayor",
+      "scale": [
+        "Bb",
+        "C",
+        "D",
+        "Eb",
+        "F",
+        "G",
+        "A"
+      ],
+      "chords": [
+        {
+          "chord": "Bbmaj9",
+          "bars": 1,
+          "notes": [
+            "Bb2",
+            "F3",
+            "A3",
+            "C4",
+            "D4"
+          ],
+          "root": "Bb1"
+        },
+        {
+          "chord": "Gm7",
+          "bars": 1,
+          "notes": [
+            "G2",
+            "D3",
+            "F3",
+            "Bb3"
+          ],
+          "root": "G1"
+        },
+        {
+          "chord": "Ebmaj7",
+          "bars": 1,
+          "notes": [
+            "Eb3",
+            "G3",
+            "Bb3",
+            "D4"
+          ],
+          "root": "Eb2"
+        },
+        {
+          "chord": "F6",
+          "bars": 1,
+          "notes": [
+            "F2",
+            "C3",
+            "D3",
+            "A3"
+          ],
+          "root": "F1"
+        }
+      ],
+      "melody": "D5:2 F5:2 D5:2 C5:2 Bb4:4 F4:4 G4:2 Bb4:2 D5:4 F5:4 D5:4 Eb5:2 D5:2 Bb4:4 G4:4 Bb4:4 C5:4 D5:4 F5:8"
+    },
+    {
+      "key": "Do mayor",
+      "scale": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B"
+      ],
+      "chords": [
+        {
+          "chord": "Cmaj9",
+          "bars": 1,
+          "notes": [
+            "C3",
+            "G3",
+            "B3",
+            "D4",
+            "E4"
+          ],
+          "root": "C2"
+        },
+        {
+          "chord": "Am7",
+          "bars": 1,
+          "notes": [
+            "A2",
+            "E3",
+            "G3",
+            "C4"
+          ],
+          "root": "A1"
+        },
+        {
+          "chord": "Fmaj7",
+          "bars": 1,
+          "notes": [
+            "F3",
+            "A3",
+            "C4",
+            "E4"
+          ],
+          "root": "F1"
+        },
+        {
+          "chord": "G6",
+          "bars": 1,
+          "notes": [
+            "G2",
+            "D3",
+            "E3",
+            "B3"
+          ],
+          "root": "G1"
+        }
+      ],
+      "melody": "E5:2 G5:2 E5:2 D5:2 C5:4 G4:4 A4:2 C5:2 E5:4 G5:4 E5:4 F5:2 E5:2 C5:4 A4:4 C5:4 D5:4 E5:4 G5:8"
+    },
+    {
+      "key": "Re mayor",
+      "scale": [
+        "D",
+        "E",
+        "F#",
+        "G",
+        "A",
+        "B",
+        "C#"
+      ],
+      "chords": [
+        {
+          "chord": "Gmaj7",
+          "bars": 1,
+          "notes": [
+            "G2",
+            "D3",
+            "F#3",
+            "B3"
+          ],
+          "root": "G1"
+        },
+        {
+          "chord": "A",
+          "bars": 1,
+          "notes": [
+            "A2",
+            "E3",
+            "A3",
+            "C#4"
+          ],
+          "root": "A1"
+        },
+        {
+          "chord": "Bm7",
+          "bars": 1,
+          "notes": [
+            "B2",
+            "F#3",
+            "A3",
+            "D4"
+          ],
+          "root": "B1"
+        },
+        {
+          "chord": "D",
+          "bars": 1,
+          "notes": [
+            "D3",
+            "F#3",
+            "A3",
+            "D4"
+          ],
+          "root": "D2"
+        }
+      ],
+      "melody": "D5:2 F#5:2 B5:4 A5:2 F#5:2 D5:4 C#5:2 E5:2 A5:4 E5:4 C#5:4 D5:2 F#5:2 B5:4 A5:4 F#5:4 A5:8 F#5:4 D5:4"
+    }
+  ],
+  "sectionThresholds": [
+    0.125,
+    0.25
+  ],
+  "layers": {
+    "drone": {
+      "wave": "sine",
+      "gainDb": -24,
+      "cutoff": 500
+    },
+    "pad": {
+      "wave": "triangle",
+      "gainDb": -26,
+      "cutoff": 1000
+    },
+    "bass": {
+      "wave": "triangle",
+      "gainDb": -14,
+      "cutoff": 700,
+      "steps": "x.xx..x.x.xx..x.",
+      "decay": 0.15,
+      "fm": {
+        "ratio": 1,
+        "index": 1
+      }
+    },
+    "arp": {
+      "wave": "triangle",
+      "gainDb": -24,
+      "cutoff": 3000,
+      "steps": "xxxxxxxxxxxxxxxx",
+      "decay": 0.12,
+      "fm": {
+        "ratio": 4,
+        "index": 2.5
+      }
+    },
+    "perc": {
+      "gainDb": -12,
+      "kick": "x.........x.....",
+      "hat": "x.x.x.x.x.x.x.xx",
+      "snare": "....x..x.x..x..."
+    },
+    "melody": {
+      "wave": "triangle",
+      "gainDb": -17,
+      "cutoff": 3500,
+      "decay": 0.7,
+      "fm": {
+        "ratio": 1,
+        "index": 1.2
+      }
+    }
+  },
+  "sections": [
+    [
+      "drone",
+      "pad",
+      "melody",
+      "bass"
+    ],
+    [
+      "drone",
+      "pad",
+      "melody",
+      "bass",
+      "perc"
+    ],
+    [
+      "drone",
+      "pad",
+      "melody",
+      "bass",
+      "perc",
+      "arp"
+    ]
+  ],
+  "voice": {
+    "wave": "triangle",
+    "decay": 0.5,
+    "cutoff": 3500,
+    "fm": {
+      "ratio": 1,
+      "index": 1.5
+    }
+  },
+  "palette": [
+    "#2979ff",
+    "#e3f2fd",
+    "#aa00ff"
+  ],
+  "tileSkin": "storm",
+  "environment": "tormenta"
+}

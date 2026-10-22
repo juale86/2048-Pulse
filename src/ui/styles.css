@@ -1,0 +1,221 @@
+/* Minimal HUD, title, panels. Thin type, no boxes on the HUD. See docs/01-gdd.md §6, §9. */
+#ui {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+#ui button {
+  min-width: 48px;
+  min-height: 48px;
+  font: inherit;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+#ui button.primary {
+  margin-top: 16px;
+  padding: 0 28px;
+  color: #03050a;
+  background: #1de9b6;
+  border: none;
+  border-radius: 8px;
+}
+
+#ui button.link {
+  display: block;
+  margin: 8px auto 0;
+  color: rgba(255, 255, 255, 0.6);
+  background: none;
+  border: none;
+  text-decoration: underline;
+}
+
+#ui button:focus-visible {
+  outline: 2px solid #1de9b6;
+  outline-offset: 3px;
+}
+
+/* Loading */
+.loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: #03050a;
+}
+
+.loading-pulse {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1de9b6;
+  box-shadow: 0 0 24px #1de9b6;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.6); opacity: 0.4; }
+}
+
+/* HUD */
+.hud {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.hud.side {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hud-score { font-size: 28px; font-weight: 300; }
+.hud-small { font-size: 14px; opacity: 0.7; }
+
+.hud-bonus {
+  height: 20px;
+  font-size: 16px;
+  color: #1de9b6;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.hud-bonus.show { opacity: 1; }
+
+.hud-stage {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 14px 0;
+  text-align: center;
+  background: linear-gradient(90deg, transparent, rgba(3, 5, 10, 0.7) 25%, rgba(3, 5, 10, 0.7) 75%, transparent);
+  font-size: clamp(28px, 7vmin, 56px);
+  font-weight: 200;
+  letter-spacing: 0.3em;
+  color: #fff;
+  text-shadow: 0 0 24px rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.8s;
+  pointer-events: none;
+}
+
+.hud-stage.show { opacity: 1; }
+
+.hint {
+  position: absolute;
+  left: 50%;
+  bottom: 9%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  white-space: nowrap;
+  opacity: 0.75;
+  transition: opacity 0.6s;
+  animation: hint-breathe 2.4s ease-in-out infinite;
+}
+
+.hint[hidden] { display: block; opacity: 0; animation: none; }
+
+@keyframes hint-breathe {
+  50% { opacity: 0.4; }
+}
+
+.pause {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(24px, 6vmin, 44px);
+  font-weight: 200;
+  letter-spacing: 0.3em;
+  color: #fff;
+  background: rgba(3, 5, 10, 0.6);
+}
+
+.pause[hidden] { display: none; }
+
+/* Title */
+.title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: clamp(32px, 8vmin, 64px);
+  font-weight: 200;
+  letter-spacing: 0.12em;
+  color: #fff;
+  text-shadow: 0 0 24px rgba(29, 233, 182, 0.7);
+}
+
+.title-best { min-height: 1.2em; opacity: 0.7; }
+
+.title-credit {
+  margin: 20px 0 0;
+  font-size: 12px;
+  opacity: 0.55;
+}
+
+/* Panels */
+.gameover,
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 24px 32px;
+  text-align: center;
+  background: rgba(3, 5, 10, 0.78);
+  border: 1px solid rgba(51, 224, 255, 0.35);
+  border-radius: 12px;
+  pointer-events: auto;
+}
+
+.gameover h2,
+.modal h2 { margin: 0 0 12px; font-weight: 300; }
+.gameover p { margin: 4px 0; }
+.gameover-record { color: #1de9b6; }
+
+.modal { min-width: min(320px, 80vw); text-align: left; }
+.modal .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+}
+.modal input[type="range"] { width: 140px; accent-color: #1de9b6; }
+.modal input[type="checkbox"] { width: 22px; height: 22px; accent-color: #1de9b6; }
+.modal select { min-height: 36px; font: inherit; }
+.modal .primary { display: block; margin-left: auto; margin-right: auto; }
+
+/* Corner controls (bottom, away from YouTube's own top controls) */
+.settings-button {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  background: none;
+  border: none;
+}
+
+.cloud {
+  position: absolute;
+  right: 16px;
+  bottom: 24px;
+  color: rgba(255, 255, 255, 0.6);
+}

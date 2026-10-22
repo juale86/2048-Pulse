@@ -46,10 +46,32 @@ F0, F1 y F2 implementadas. F3 está en curso: lo que falta requiere navegador, d
 npm run dev          # desarrollo con MockSdk (panel de debug: tecla `)
 npm test             # tests de core, guardado y etapas
 npm run build        # build de producción (SDK de YouTube inyectado)
+npm run build:mock   # build de producción con MockSdk, para probar fuera de YouTube
+npm run preview:lan  # sirve dist/ en la red local (probar en el celular)
+npm run preview:csp  # sirve dist/ con la CSP de Playables
 npm run check        # valida dist/ contra las reglas de Playables
 npm run zip          # empaqueta dist/ para subir al Developer Portal
 npx vite-node scripts/simulate-par.ts 200   # calibración del bonus de récord
 ```
+
+## Probar el juego
+
+El build de YouTube (`npm run build`) solo arranca dentro de Playables. Para probar fuera de YouTube se usa el build con `MockSdk`, que simula la plataforma: guarda en `localStorage` y pausa el juego cuando la página se oculta, igual que YouTube al bloquear el celular.
+
+- **En línea:** cada push a `main` publica el build mock en GitHub Pages: <https://juale86.github.io/2048-Pulse/>.
+- **En el celular, en la red local:** `npm run build:mock && npm run preview:lan`, y abrir `http://<IP del Wi-Fi>:4173` desde un dispositivo en la misma red.
+
+### Modo debug
+
+Agregando `?debug` a la URL aparece un indicador con fps, nivel de calidad, densidad de render (usada/del dispositivo), resolución del canvas y si hay postprocesado:
+
+| URL | Indicador |
+|---|---|
+| `https://juale86.github.io/2048-Pulse/` | No |
+| `https://juale86.github.io/2048-Pulse/?debug` | Sí |
+| `http://<IP>:4173/?debug` | Sí |
+
+Solo funciona con `MockSdk` (`dev`, `build:mock` y GitHub Pages). En el build de YouTube el parámetro no tiene efecto: ese código no se incluye.
 
 ## Licencia
 

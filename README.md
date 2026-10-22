@@ -50,3 +50,7 @@ npm run check        # valida dist/ contra las reglas de Playables
 npm run zip          # empaqueta dist/ para subir al Developer Portal
 npx vite-node scripts/simulate-par.ts 200   # calibración del bonus de récord
 ```
+
+## Licencia
+
+Copyright (c) 2026 Juan Manuel Aleman. Todos los derechos reservados. Ver [`LICENSE`](LICENSE).

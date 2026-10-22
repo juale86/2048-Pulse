@@ -324,8 +324,8 @@ En baja no hay pasadas a pantalla completa (lo más caro en GPU de celular), as�
   - **Por debajo de 30 fps baja enseguida**, sin esperar el enfriamiento.
   - No mide durante las transiciones de etapa.
 - "Efectos reducidos" multiplica además las partículas por 0.3 y desactiva cámara y flashes.
-- **Indicador de diagnóstico** (`DebugStats`): en desarrollo y en builds mock muestra fps, nivel, densidad de render (usada/del dispositivo), resolución del canvas y si hay postprocesado. Nunca en el build de YouTube.
-- **Probar en el celular**: `npm run build:mock && npm run preview:lan` y abrir `http://<IP del Wi-Fi>:4173` desde un dispositivo en la misma red. El servidor de desarrollo (`dev:lan`) sirve código sin optimizar y no es representativo para medir.
+- **Indicador de diagnóstico** (`DebugStats`): en desarrollo y en builds mock con `?debug` en la URL (por ejemplo `http://<IP>:4173/?debug`) muestra fps, nivel, densidad de render (usada/del dispositivo), resolución del canvas y si hay postprocesado. Nunca en el build de YouTube.
+- **Probar en el celular**: `npm run build:mock && npm run preview:lan` y abrir `http://<IP del Wi-Fi>:4173` (o `/?debug` para ver el indicador) desde un dispositivo en la misma red. El servidor de desarrollo (`dev:lan`) sirve código sin optimizar y no es representativo para medir.
 
 ## 9. Audio
 

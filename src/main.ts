@@ -172,9 +172,10 @@ async function main(): Promise<void> {
   new Keyboard(input.push, controller.confirm);
   new Pointer(canvas, input.push, () => renderer.boardPixels());
 
-  // Stats overlay for device testing: dev server and mock builds only, never the YouTube build.
+  // Stats overlay for device testing: dev server and mock builds only, and only with `?debug` in
+  // the URL. Never in the YouTube build (the whole check is compiled out there).
   const stats =
-    import.meta.env.VITE_PLAYABLES_SDK === 'mock'
+    import.meta.env.VITE_PLAYABLES_SDK === 'mock' && new URLSearchParams(location.search).has('debug')
       ? new DebugStats(ui, { level: () => level, dpr: () => renderer.pixelRatio, post: () => renderer.postFx.enabled, canvas })
       : null;
 

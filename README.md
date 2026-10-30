@@ -4,6 +4,28 @@
 
 Un 2048 clásico (4×4, reglas originales) renderizado en 3D con three.js, donde **jugar es tocar la música**. Cada deslizamiento, fusión y ficha nueva suena cuantizado al beat, y el mundo de partículas, luz y color reacciona a cada jugada, al estilo sinestésico de *Tetris Effect*. Se publica como **YouTube Playable** para escritorio y móvil.
 
+**Jugar en línea:** <https://juale86.github.io/2048-Pulse/>
+
+## Inicio rápido
+
+Requisitos: [Node.js](https://nodejs.org/) 20 o superior (el CI usa la 24; hay un `.nvmrc`) y npm. No hace falta nada más: todas las dependencias van en el bundle.
+
+```bash
+git clone git@github.com:juale86/2048-Pulse.git
+cd 2048-Pulse
+npm run setup   # instala las versiones exactas del lockfile (npm ci) y pasa los tests
+npm run dev     # abre http://localhost:5173
+```
+
+En desarrollo el juego usa `MockSdk`, que simula YouTube Playables. Con la tecla `` ` `` se abre su panel de debug (pausa, audio, idioma, guardado).
+
+## Controles
+
+| Plataforma | Mover |
+|---|---|
+| Escritorio | Flechas o WASD |
+| Móvil | Deslizar el dedo sobre el tablero |
+
 ## Créditos
 
 **2048** es un juego creado por **Gabriele Cirulli** (2014). 2048 Pulse es una reinterpretación audiovisual de sus reglas; la autoría del juego original es suya. El crédito aparece en la pantalla de título y en la ficha del Playable.
@@ -42,17 +64,29 @@ Vite · TypeScript · three.js (vanilla) · Web Audio API nativa · Vitest. Sin 
 
 F0, F1 y F2 implementadas. F3 está en curso: lo que falta requiere navegador, dispositivos y acceso al Developer Portal. Ver [docs/05-roadmap.md](docs/05-roadmap.md).
 
+## Comandos
+
+| Comando | Qué hace |
+|---|---|
+| `npm run setup` | Instala las dependencias exactas del lockfile y pasa los tests |
+| `npm run dev` | Servidor de desarrollo con `MockSdk` (panel de debug: tecla `` ` ``) |
+| `npm run dev:lan` | Igual, pero accesible desde otros dispositivos de la red local |
+| `npm test` | Tests de core, guardado, audio y etapas (Vitest) |
+| `npm run build` | Build de producción para YouTube (SDK de Playables inyectado) |
+| `npm run build:mock` | Build de producción con `MockSdk`, para probar fuera de YouTube |
+| `npm run preview:lan` | Sirve `dist/` en la red local (probar en el celular) |
+| `npm run preview:csp` | Sirve `dist/` con la CSP de Playables |
+| `npm run check` | Valida `dist/` contra las reglas de Playables (`check:mock` para el build mock) |
+| `npm run zip` | Empaqueta `dist/` para subir al Developer Portal |
+| `npx vite-node scripts/simulate-par.ts 200` | Calibración del bonus de récord |
+
+### Publicar en YouTube Playables
+
+```bash
+npm run build && npm run check && npm run zip
 ```
-npm run dev          # desarrollo con MockSdk (panel de debug: tecla `)
-npm test             # tests de core, guardado y etapas
-npm run build        # build de producción (SDK de YouTube inyectado)
-npm run build:mock   # build de producción con MockSdk, para probar fuera de YouTube
-npm run preview:lan  # sirve dist/ en la red local (probar en el celular)
-npm run preview:csp  # sirve dist/ con la CSP de Playables
-npm run check        # valida dist/ contra las reglas de Playables
-npm run zip          # empaqueta dist/ para subir al Developer Portal
-npx vite-node scripts/simulate-par.ts 200   # calibración del bonus de récord
-```
+
+El ZIP resultante (`2048-pulse-<versión>.zip`) se sube al Developer Portal. Los metadatos de la ficha están en [docs/06-ficha-playable.md](docs/06-ficha-playable.md).
 
 ## Probar el juego
 

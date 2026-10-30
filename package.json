@@ -4,7 +4,11 @@
   "private": true,
   "license": "UNLICENSED",
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
+    "setup": "npm ci && npm test",
     "dev": "vite",
     "dev:lan": "vite --host",
     "build": "tsc --noEmit && vite build",
